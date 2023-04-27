@@ -8,7 +8,6 @@ import getRootUrl from '../utils/rootUrl';
 import classes from './Header.module.scss';
 import { sections } from './Section';
 
-
 export default function Header() {
   const rootUrl = getRootUrl();
   const router = useRouter();
@@ -107,7 +106,7 @@ export default function Header() {
             className="hidden lg:flex lg:gap-4 lg:text-sm lg:font-bold lg:uppercase lg:tracking-wide"
           >
             {sections.map((item) => (
-              <Link key={item.anchor} href={"#" + item.anchor}>
+              <Link key={item.anchor} href={`#${item.anchor}`} passHref={true}>
                 <div
                   className={`${
                     router.pathname === item.anchor
