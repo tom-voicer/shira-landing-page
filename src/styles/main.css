@@ -1,13 +1,11 @@
 @tailwind base;
 
-a {
-  @apply text-blue-700;
-}
-
-a:hover {
-  @apply underline;
-}
-
 @tailwind components;
 
 @tailwind utilities;
+
+
+html {
+--scroll-behavior: smooth!important;
+scroll-behavior: smooth!important;
+}
