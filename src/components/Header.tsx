@@ -72,8 +72,9 @@ export default function Header() {
             </button>
             <nav aria-label="Main Nav" className="flex flex-col space-y-1">
               {sections.map((item) => (
-                <Link key={item.anchor} href={item.anchor}>
+                <Link key={item.anchor} href={`#${item.anchor}`}>
                   <a
+                    onClick={handleMobileMenuClick}
                     className={`${
                       router.pathname === item.anchor
                         ? 'text-primary font-extrabold'
